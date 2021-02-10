@@ -1,0 +1,12 @@
+*
+!*.*
+!*/
+!LICENSE
+!README
+!Makefile
+!Dockerfile
+.vscode
+vendor/
+dist/
+*.swp
+*.cover

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package some.v2;
+// package api.some.v2;
+
+option go_package = "github.com/zerospiel/proto_workshop/pkg/some/v2";
+
+import "google/protobuf/empty.proto";
+
+message MethodNameTwoResponse {
+    string s = 1;
+}
+
+service SomeService {
+    rpc MethodNameTwo(google.protobuf.Empty) returns (MethodNameTwoResponse);
+}

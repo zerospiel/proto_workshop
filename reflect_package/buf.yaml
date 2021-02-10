@@ -1,0 +1,16 @@
+version: v1beta1
+build:
+  roots:
+    - .
+lint:
+  use:
+    - DEFAULT
+  rpc_allow_same_request_response: false
+  rpc_allow_google_protobuf_empty_requests: true
+  rpc_allow_google_protobuf_empty_responses: true
+  except:
+    - PACKAGE_VERSION_SUFFIX
+    - RPC_REQUEST_RESPONSE_UNIQUE
+breaking:
+  use:
+    - FILE

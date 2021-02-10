@@ -1,0 +1,12 @@
+version: v1beta1
+plugins:
+  - name: go
+    # out: pkg/some
+    out: .
+    opt: module=github.com/zerospiel/proto_workshop
+  - name: go-grpc
+    # out: pkg/some
+    out: .
+    opt: module=github.com/zerospiel/proto_workshop
+  - name: python
+    out: python_pb

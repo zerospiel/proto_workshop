@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package foobar;
+
+// https://developers.google.com/protocol-buffers/docs/proto#importing_definitions
+// https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.descriptor#DescriptorPool.EnforceWeakDependencies.details
+// DO NOT USE THESE DIRECTIVES
+import weak "foobar/foobar.proto";            // <--- will be Empty in theory
+import public "google/protobuf/empty.proto";  // <--- propagate
+// DO NOT USE THESE DIRECTIVES
+
+service FooService {
+    rpc FooMethod(google.protobuf.Empty) returns (MethodNameResponse);
+}
+
+service BarService {
+    rpc BarMethod(google.protobuf.Empty) returns (MethodNameResponse);
+}
+
+// message MethodNameResponse {
+//     string f = 1;
+//     int32 s = 2;
+//     map<string, double> t = 3;
+//     reserved 4;
+// }
