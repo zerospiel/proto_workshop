@@ -11,6 +11,7 @@ import (
 
 var (
 	helloF = flag.String("hello", "default_value", "output hello")
+	skipF  = flag.Bool("dryrun", false, "skip actual generating")
 )
 
 func main() {
@@ -37,13 +38,17 @@ func main() {
 
 			g.P("func MyHelloWorld() {")
 			g.P(
-				g.QualifiedGoIdent(
-					protogen.GoImportPath("fmt").Ident("Printf"),
-				),
+				protogen.GoImportPath("fmt").Ident("Printf"),
 				`("(%s!\n)", "`+*helloF+`")`,
 			)
 			g.P("}")
 			g.P()
+
+			if *skipF {
+				bb, _ := g.Content()
+				fmt.Fprintf(os.Stderr, "Will generate:\n%s\n", string(bb))
+				g.Skip()
+			}
 		}
 
 		return nil
