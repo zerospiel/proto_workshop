@@ -8,3 +8,5 @@ Tools and versions that I used at the moment of coding this (`Mon Feb 15 03:11:3
 - [protoc-gen-go-grpc](https://github.com/grpc/grpc-go/tree/master/cmd/protoc-gen-go-grpc)@v1.1.0
 - [protoc](https://github.com/protocolbuffers/protobuf)@v3.14.0
 - [go](https://golang.org/)@v1.16rc1
+- [dotnet](https://dotnet.microsoft.com/download)@v5.0.100
+- [python](https://www.python.org/downloads/)@v3.9.1
