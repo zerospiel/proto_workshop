@@ -4,6 +4,7 @@ package foobar;
 
 // https://developers.google.com/protocol-buffers/docs/proto#importing_definitions
 // https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.descriptor#DescriptorPool.EnforceWeakDependencies.details
+// https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/descriptor.proto#L62
 // DO NOT USE THESE DIRECTIVES
 import weak "foobar/foobar.proto";            // <--- will be Empty in theory
 import public "google/protobuf/empty.proto";  // <--- propagate

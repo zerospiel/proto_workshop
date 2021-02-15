@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package foobar;
 
+// import "google/protobuf/empty.proto";
+
 message MethodNameResponse {
     string f = 1;
     int32 s = 2;

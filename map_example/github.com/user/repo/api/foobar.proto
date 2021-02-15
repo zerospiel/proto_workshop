@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package foobar;
+
+// option go_package = "google.golang.org/protobuf/types/pluginpb";
+
+message FooResponse {
+    string echo = 1;
+}

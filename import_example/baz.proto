@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package baz;
+
+option go_package = "github.com/zerospiel/proto_workshop/import_example/pkg/baz";
+
+import "google/protobuf/empty.proto";
+import "github.com/user/repo/api/foobar.proto";
+
+service BazService {
+    rpc MethodName(google.protobuf.Empty) returns (foobar.FooResponse);
+}
