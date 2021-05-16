@@ -10,3 +10,4 @@ vendor/
 dist/
 *.swp
 *.cover
+!.githooks/*
