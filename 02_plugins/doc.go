@@ -1,4 +1,4 @@
-// Package plugins will be used for several purposes in a discussion:
+// Package plugins will be used for several purposes in our discussion:
 //
 // - what is protoc-plugins
 //

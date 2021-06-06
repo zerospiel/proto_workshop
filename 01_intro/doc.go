@@ -1,4 +1,4 @@
-// Package intro will be used for several purposes in a discussion:
+// Package intro will be used for several purposes in our discussion:
 //
 // - what is protobuf (IDL, RPC)
 //

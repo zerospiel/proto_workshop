@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package example.opts;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/zerospiel/proto_workshop/options/opts/generated";
+
+message ExampleMessage {
+    sint32 foo = 1;
+    google.protobuf.Timestamp ts = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package example.imports;
+
+import "google/protobuf/timestamp.proto";                 // <- WKT
+import "k8s.io/apimachinery/pkg/runtime/generated.proto"; // <- non-WKT
+import "google/type/decimal.proto";                       // <- non-WKT
+
+option go_package = "github.com/zerospiel/proto_workshop/options/imports/generated";
+
+message ExampleMessage {
+    sint32 foo = 1;
+    google.protobuf.Timestamp ts = 2;
+    google.type.Decimal dc = 3;
+    k8s.io.apimachinery.pkg.runtime.TypeMeta runtime_type_meta = 4;
+}

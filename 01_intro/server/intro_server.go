@@ -1,4 +1,4 @@
-//go:generate protoc --proto_path ../helloworld --go_out=module=github.com/zerospiel/proto_workshop/intro:.. --go-grpc_out=module=github.com/zerospiel/proto_workshop/intro:.. ../helloworld/helloworld.proto
+//go:generate protoc --proto_path ../helloworld --go_out=paths=source_relative:../helloworld --go-grpc_out=paths=source_relative:../helloworld ../helloworld/helloworld.proto
 package main
 
 import (

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package reflection.hw.v1;
+
+option go_package = "github.com/zerospiel/proto_workshop/reflection/helloworld";
+
+// import "github.com/envoyproxy/protoc-gen-validate/validate/validate.proto";
+// import "validate/validate.proto";
+
+service Greeter {
+    rpc SayHello(HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    string name = 1;
+    // string name = 1 [(validate.rules).string.min_len = 3];
+}
+
+message HelloReply {
+    string message = 1;
+}

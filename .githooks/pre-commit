@@ -2,6 +2,7 @@
 set -e
 
 make lint || (echo "lint failed"; exit 1)
+make deps || (echo "deps failed"; exit 1)
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then

@@ -1,4 +1,4 @@
-module github.com/zerospiel/proto_workshop/custom_plugin
+module github.com/zerospiel/proto_workshop/custom_plugin1
 
 go 1.16
 

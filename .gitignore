@@ -11,3 +11,4 @@ dist/
 *.swp
 *.cover
 !.githooks/*
+**/third_party/**
