@@ -5,7 +5,7 @@
 - [Protoc basics workshop](#protoc-basics-workshop)
     - [Tooling](#tooling)
     - [Useful references](#useful-references)
-    - [Protoc dumb flow](#protoc-dumb-flow)
+    - [Procobuf and protoc dumb flows](#procobuf-and-protoc-dumb-flows)
 
 <!-- /TOC -->
 
@@ -26,8 +26,14 @@
 1. [Lyft's tool for protoc plugins creation](<https://github.com/lyft/protoc-gen-star>)
 1. [Buf Build Documentation](<https://docs.buf.build>)
 
-## Protoc dumb flow
+## Procobuf and protoc dumb flows
 
-For simplification purposes for checking out, I place the image of the flow here:
+For simplification purposes for checking out, I placed images of flow here:
 
-![flow](./flow/protoc.svg)
+Protobuf flow:
+
+![protobuf_flow](./01_intro/pb.svg)
+
+Protoc flow:
+
+![protoc_flow](./02_plugins/protoc.svg)
