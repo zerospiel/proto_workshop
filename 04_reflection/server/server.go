@@ -34,7 +34,7 @@ func main() {
 	pb.RegisterGreeterServer(s, &server{})
 	reflection.Register(s)
 
-	go s.Serve(lis)
+	go s.Serve(lis) //nolint
 
 	ch := make(chan os.Signal, 1)
 	signal.Notify(ch, os.Interrupt)
