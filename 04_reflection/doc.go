@@ -1,6 +1,6 @@
 // Package reflection will be used for several purposes in our discussion:
 //
-// - what it gRPC Reflection and why do we need it
+// - what it gRPC Reflection and why do we need it (motivation)
 //
 // - why package (Service-Name in gRPC interop) is so important
 //
