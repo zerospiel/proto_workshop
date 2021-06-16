@@ -12,3 +12,4 @@ dist/
 *.cover
 !.githooks/*
 **/third_party/**
+02_plugins/helloworldpb/*

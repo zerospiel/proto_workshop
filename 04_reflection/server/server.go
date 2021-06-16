@@ -1,6 +1,7 @@
-//go:generate protoc --proto_path ../helloworld --go_out=paths=source_relative:../helloworld --go-grpc_out=paths=source_relative:../helloworld ../helloworld/helloworld.proto
-//go:generate mkdir -p ../helloworld/third_party/github.com/envoyproxy/protoc-gen-validate/validate/
+//go:generate mkdir -p ../helloworld/third_party/github.com/envoyproxy/protoc-gen-validate/validate/ ../helloworld/third_party/validate/
 //go:generate curl -sSL0 https://raw.githubusercontent.com/envoyproxy/protoc-gen-validate/b212fd4217dfe09d85069051d9c71fcc2089d486/validate/validate.proto -o ../helloworld/third_party/github.com/envoyproxy/protoc-gen-validate/validate/validate.proto
+//go:generate cp ../helloworld/third_party/github.com/envoyproxy/protoc-gen-validate/validate/validate.proto ../helloworld/third_party/validate/validate.proto
+//go:generate protoc --proto_path ../helloworld:../helloworld/third_party --go_out=paths=source_relative:../helloworld --go-grpc_out=paths=source_relative:../helloworld ../helloworld/helloworld.proto
 package main
 
 import (

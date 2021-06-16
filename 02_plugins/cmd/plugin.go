@@ -1,4 +1,5 @@
 //go:generate go build -o $GOBIN/protoc-gen-mfp ./plugin.go
+//go:generate rm -fr ../helloworldpb
 //go:generate mkdir -p ../helloworldpb
 //go:generate protoc --proto_path ../../ --mfp_out=hello=hello_world:../helloworldpb ../../01_intro/helloworld/helloworld.proto
 //go:generate protoc --proto_path ../../ --mfp_out=hello=hello_world,dryrun=true:../helloworldpb ../../01_intro/helloworld/helloworld.proto
@@ -52,13 +53,31 @@ func main() {
 			g.P("package ", f.GoPackageName)
 			g.P()
 
-			g.Import(protogen.GoImportPath("fmt"))
-
-			g.P("func MyHelloWorld() {")
+			g.P("func HelloWorld() {")
 			g.P(
 				protogen.GoImportPath("fmt").Ident("Printf"),
-				`("(%s!\n)", "`+*helloF+`")`,
+				`("I have the following structure:\n")`,
 			)
+			g.P()
+			for _, v := range f.Messages {
+				g.P(
+					protogen.GoImportPath("fmt").Ident("Printf"),
+					`("Message: %s\n","`+v.GoIdent.GoName+`")`,
+				)
+				for _, vv := range v.Fields {
+					g.P(
+						protogen.GoImportPath("fmt").Ident("Printf"),
+						`("\t%s\n","`+vv.GoName+`")`,
+					)
+				}
+				g.P()
+			}
+
+			g.P(
+				protogen.GoImportPath("fmt").Ident("Printf"),
+				`("Hello %s!","`+*helloF+`")`,
+			)
+
 			g.P("}")
 			g.P()
 

@@ -8,7 +8,10 @@ option java_package = "io.grpc.examples.helloworld";
 option java_outer_classname = "HelloWorldProto";
 
 service Greeter {
-    rpc SayHello(HelloRequest) returns (HelloReply) {}
+    rpc SayHello(HelloRequest) returns (HelloReply);
+    // rpc ClientStreamsHello(stream HelloRequest) returns (HelloReply);
+    // rpc ServerStreamsHello(HelloRequest) returns (stream HelloReply);
+    // rpc FullDuplexStreamHello(stream HelloRequest) returns (stream HelloReply);
 }
 
 message HelloRequest {
@@ -17,4 +20,11 @@ message HelloRequest {
 
 message HelloReply {
     string message = 1;
+}
+
+message DoNotUseExample {
+    fixed64 some_int = 1;
+    reserved 2;
+    reserved "existed_field_name";
+    map<int32, string> some_map = 65536;  // number unequivocally identifies field in the binary encoded data
 }

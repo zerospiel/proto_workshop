@@ -2,9 +2,7 @@
 //
 // - what is protobuf (IDL, RPC)
 //
-// - protoc tool requirement
-//
 // - basic syntax spec
 //
-// - what is gRPC (pros/cons)
+// - what is gRPC
 package intro
